@@ -3,6 +3,8 @@
 # Define Catppuccin Mocha colors
 local mocha_blue="%F{38}"   # Light blue (Arch logo color)
 local mocha_pink="%F{211}"  # Pink (username color)
+local mocha_mauve="%F{135}"    # Mauve color
+local mocha_lavender="%F{69}"  # Lavender color
 local mocha_text="%F{249}"  # Light gray (path and symbols)
 local mocha_red="%F{204}"   # Red (unsynced changes indicator)
 local mocha_green="%F{120}" # Green (synced changes indicator)
@@ -33,4 +35,4 @@ git_status() {
 }
 
 # Prompt setup
-PROMPT='${mocha_blue}${arch_icon} ${mocha_pink}%n@%m ${mocha_text}%~$(git_status) >%f '
+PROMPT='${mocha_blue}${arch_icon} ${mocha_mauve}%n${mocha_pink}@${mocha_lavender}%m ${mocha_text}%~$(git_status) >%f '
