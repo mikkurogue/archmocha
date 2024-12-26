@@ -35,4 +35,4 @@ git_status() {
 }
 
 # Prompt setup
-PROMPT='${mocha_blue}${arch_icon} ${mocha_mauve}%n${mocha_pink}@${mocha_lavender}%m ${mocha_text}%~$(git_statu
+PROMPT='${mocha_blue}${arch_icon} ${mocha_mauve}%n${mocha_pink}@${mocha_lavender}%m ${mocha_text}%~$(git_status) > '
