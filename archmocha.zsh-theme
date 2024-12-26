@@ -20,14 +20,17 @@ git_status() {
     local ahead=$(git rev-list --count HEAD.."$upstream" 2>/dev/null)
     local behind=$(git rev-list --count "$upstream"..HEAD 2>/dev/null)
 
-    # Arrows for push/pull status
+   # Check for untracked files
+    local untracked=$(git ls-files --others --exclude-standard 2>/dev/null | wc -l)
+
+    # Build the Git status string
     local git_info="on ${mocha_blue}${branch}${mocha_text}"
-    [[ $ahead -gt 0 ]] && git_info+=" ${mocha_red}↑${ahead}${mocha_text}"
-    [[ $behind -gt 0 ]] && git_info+=" ${mocha_green}↓${behind}${mocha_text}"
+    [[ $ahead -gt 0 ]] && git_info+=" ${mocha_red}⇡${ahead}${mocha_text}"
+    [[ $behind -gt 0 ]] && git_info+=" ${mocha_green}⇣${behind}${mocha_text}"
+    [[ $untracked -gt 0 ]] && git_info+=" ${mocha_yellow}*${mocha_text}"
     echo -n " ${git_info}"
   fi
 }
 
 # Prompt setup
 PROMPT='${mocha_blue}${arch_icon} ${mocha_pink}%n@%m ${mocha_text}%~$(git_status) >%f '
-
