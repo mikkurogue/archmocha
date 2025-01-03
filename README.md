@@ -15,7 +15,7 @@ ZSH_THEME="archmocha"
 ```
 
 Note: An actual installation script/symlink of some kind will be added in the future for upstream updates :)
-
+asdf
 ### How it looks
 
 ![Prompt look](./assets/prompt_look.png)
