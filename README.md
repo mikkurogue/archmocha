@@ -8,6 +8,11 @@ To install I recommend for now to copy the contents of the .zsh-theme file, and 
 
 You can find this folder in `~./.oh-my-zsh/themes` usually.
 
+Best and easiest way is to clone this repository `git clone https://github.com/mikkurogue/archmocha.git && cd archmocha`
+
+Once cloned, I recommend using the following command to copy the theme:
+`cp archmocha.zsh-theme ~/.oh-my-zsh/themes/`
+
 Once added to your themes folder, update your .zshrc to change the theme to archmocha.
 
 ```zsh
