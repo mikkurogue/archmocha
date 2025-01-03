@@ -27,8 +27,8 @@ git_status() {
 
     # Build the Git status string
     local git_info="on ${mocha_blue}${branch}${mocha_text}"
-    [[ $ahead -gt 0 ]] && git_info+=" ${mocha_red}⇡${ahead}${mocha_text}"
-    [[ $behind -gt 0 ]] && git_info+=" ${mocha_green}⇣${behind}${mocha_text}"
+    [[ $ahead -gt 0 ]] && git_info+=" ${mocha_red}⇣${ahead}${mocha_text}"
+    [[ $behind -gt 0 ]] && git_info+=" ${mocha_green}⇡${behind}${mocha_text}"
     [[ $untracked -gt 0 ]] && git_info+=" ${mocha_yellow}*${mocha_text}"
     echo -n " ${git_info}"
   fi
